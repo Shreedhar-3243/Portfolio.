@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shreedhar | Aspiring SOC Analyst L1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6f9;--surface:#fff;--ink:#0f2a47;--muted:#52627a;--line:#d9e0ea;--accent:#1e5aa8;--accent-ink:#fff;--warn:#e8890c;--ok:#12a36b;--panel:#0f2a47;--panel-ink:#cfd8ee;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1626;--surface:#13223a;--ink:#e8eef7;--muted:#9fb0c7;--line:#233652;--accent:#5b9bd5;--accent-ink:#0c1626;--panel:#08111e}}
+:root[data-theme="dark"]{--bg:#0c1626;--surface:#13223a;--ink:#e8eef7;--muted:#9fb0c7;--line:#233652;--accent:#5b9bd5;--accent-ink:#0c1626;--panel:#08111e}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.15;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1100px,100% - 2.5rem);margin-inline:auto}
+section{padding:5.5rem 0}
+.sec-head{margin-bottom:2.2rem;max-width:34rem}
+.sec-head h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.02em}
+.sec-head p{color:var(--muted);margin-top:.6rem}
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 1.25rem Sora,sans-serif;text-decoration:none;letter-spacing:-.02em}
+.logo i{color:var(--accent);font-style:normal}
+.links{display:flex;gap:.2rem;align-items:center}
+.links a{text-decoration:none;color:var(--muted);padding:.45rem .8rem;border-radius:99px;font-weight:500;font-size:.95rem;transition:.2s}
+.links a:hover,.links a.on{color:var(--ink);background:var(--surface);box-shadow:0 0 0 1px var(--line)}
+.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.05rem}
+.burger{display:none}
+@media(max-width:860px){
+.burger{display:inline-grid;place-items:center}
+.links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);padding:.8rem 1.25rem 1.2rem;border-bottom:1px solid var(--line);display:none}
+.links.open{display:flex}
+.links a{padding:.75rem 1rem}
+}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:12px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);cursor:pointer;font-family:inherit;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px -10px var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.sec{background:transparent;color:var(--ink)}
+/* hero */
+.hero{padding-top:9rem;min-height:100svh;display:flex;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hello{display:inline-flex;gap:.55rem;align-items:center;background:var(--surface);border:1px solid var(--line);padding:.35rem .9rem;border-radius:99px;font-size:.9rem;color:var(--muted)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(18,163,107,.6)}100%{box-shadow:0 0 0 10px rgba(18,163,107,0)}}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:-.035em;margin:1.2rem 0 1rem}
+.hero .role{font-size:1.2rem;color:var(--muted);max-width:30rem}
+.role b{color:var(--ink)}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.type::after{content:"";display:inline-block;width:3px;height:1.1em;background:var(--accent);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+/* feed */
+.feed{background:var(--panel);color:var(--panel-ink);border-radius:18px;box-shadow:0 30px 60px -30px rgba(14,26,51,.6);overflow:hidden;transform:rotate(1.2deg);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:rotate(1.2deg) translateY(-10px)}}
+.feed-top{display:flex;align-items:center;gap:.4rem;padding:.8rem 1rem;border-bottom:1px solid rgba(255,255,255,.1);font:500 .8rem "DM Sans";color:#8fa0c6}
+.feed-top i{width:10px;height:10px;border-radius:50%;background:#34456e}
+.feed-top span{margin-left:auto}
+.feed-body{padding:1rem;font:500 .85rem/1.9 ui-monospace,Menlo,Consolas,monospace;min-height:230px}
+.ln{display:flex;gap:.7rem;animation:in .5s both}
+@keyframes in{from{opacity:0;transform:translateX(-12px)}}
+.ln time{color:#6f82ad}
+.ln.ok em{color:#4be3a3}.ln.warn em{color:#ffc15e}.ln.bad em{color:#ff7a7a;font-weight:700}
+.feed-foot{padding:.6rem 1rem;font-size:.75rem;color:#6f82ad;border-top:1px solid rgba(255,255,255,.1)}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.feed{transform:none;animation:none}.hero{padding-top:7rem}}
+/* cards */
+.grid{display:grid;gap:1.2rem}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.6rem;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 18px 36px -22px var(--accent)}
+.card h3{font-size:1.15rem;margin-bottom:.5rem}
+.card p{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.chip{padding:.3rem .8rem;border-radius:99px;background:var(--bg);border:1px solid var(--line);font-size:.88rem;font-weight:500}
+.chip.learn{border-style:dashed;color:var(--muted)}
+.ico{width:46px;height:46px;border-radius:13px;background:color-mix(in srgb,var(--accent) 14%,transparent);display:grid;place-items:center;font-size:1.4rem;margin-bottom:1rem}
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:2rem}
+.about p+p{margin-top:1rem}
+.facts{display:grid;gap:.8rem;align-content:start}
+.fact{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 1.1rem;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.fact span{color:var(--muted)}
+.fact b{text-align:right}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+/* timeline */
+.tl{border-left:2px solid var(--line);padding-left:1.6rem;margin-left:.5rem;position:relative}
+.tl .item{position:relative}
+.tl .item::before{content:"";position:absolute;left:calc(-1.6rem - 7px);top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 20%,transparent)}
+.badge{display:inline-block;font-size:.82rem;font-weight:700;color:var(--accent);margin-bottom:.4rem}
+/* project */
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0;overflow:hidden}
+.proj .vis{background:var(--panel);display:grid;place-items:center;padding:2rem;min-height:260px}
+.proj .txt{padding:2rem}
+.eye{width:150px;height:76px;border-radius:50%/100%;background:#eaf0ff;position:relative;overflow:hidden;animation:blinkeye 4s infinite}
+.eye::after{content:"";position:absolute;inset:14px 52px;border-radius:50%;background:#0e1a33}
+.eye::before{content:"";position:absolute;inset:0;background:#1e5aa8;transform:scaleY(0);transform-origin:top;animation:lid 4s infinite;z-index:2}
+@keyframes lid{0%,55%{transform:scaleY(0)}70%,85%{transform:scaleY(1)}100%{transform:scaleY(0)}}
+.alert-tag{margin-top:1.2rem;color:#ffc15e;font:700 .85rem ui-monospace,monospace;animation:fl 4s infinite;opacity:0}
+@keyframes fl{0%,70%{opacity:0}75%,88%{opacity:1}100%{opacity:0}}
+@keyframes blinkeye{}
+@media(max-width:760px){.proj{grid-template-columns:1fr}}
+/* resume */
+.paper{max-width:820px;background:#fff;color:#1d2840;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 50px -28px rgba(14,26,51,.45)}
+.p-head{background:#0f2a47;color:#fff;padding:2rem 2.2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:flex-end;border-bottom:4px solid #b8923a}
+.p-head h3{font-size:2rem;letter-spacing:-.02em}
+.p-head p{color:#c3d3ea;margin-top:.2rem}
+.p-meta{display:grid;gap:.15rem;font-size:.92rem;color:#cfd8ee;text-align:right}
+.p-body{display:grid;grid-template-columns:240px 1fr}
+.p-side{background:#eef2f7;padding:1.8rem 1.6rem}
+.p-main{padding:1.8rem 2.2rem}
+.p-sec{margin-bottom:1.7rem}
+.p-sec:last-child{margin-bottom:0}
+.paper h4{display:inline-block;margin:0 0 .7rem;padding-bottom:.35rem;border-bottom:2px solid #b8923a;font:700 .95rem Sora,sans-serif;color:#0f2a47}
+.paper ul{margin:0;padding-left:1.1rem;color:#44516e}
+.paper li{margin:.3rem 0}
+.paper p{color:#44516e}
+.paper b{color:#0f2a47}
+@media(max-width:700px){.p-body{grid-template-columns:1fr}.p-meta{text-align:left}}
+/* contact */
+.contact{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;max-width:820px}
+.avatar{width:190px;height:190px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#0f2a47);display:grid;place-items:center;color:#fff;font:800 4.5rem Sora;overflow:hidden;position:relative;border:5px solid var(--surface);box-shadow:0 0 0 2px var(--accent);transition:transform .3s}
+.avatar:hover{transform:scale(1.04) rotate(-2deg)}
+.avatar img{position:absolute;display:block;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.avatar small{position:absolute;bottom:14px;font:500 .7rem "DM Sans";opacity:.85}
+.clist{display:grid;gap:.9rem}
+.crow{display:flex;gap:1rem;align-items:center;padding:1rem 1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:14px;text-decoration:none;transition:.25s}
+a.crow:hover{transform:translateX(6px);border-color:var(--accent)}
+.crow .ico{margin:0;flex:none}
+.crow span{display:block;color:var(--muted);font-size:.85rem}
+@media(max-width:700px){.contact{grid-template-columns:1fr;justify-items:center}.clist{width:100%}}
+footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media print{header,.cta,#home,section:not(#resume),footer{display:none}#resume{padding:0}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home">shreedhar<i>.</i></a>
+<div class="links" id="links">
+<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#certs">Certifications</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+</div>
+<div style="display:flex;gap:.5rem">
+<button class="icon-btn" id="theme" aria-label="Switch light or dark theme">◐</button>
+<button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+</div></nav></div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div>
+<span class="hello"><span class="dot"></span>Open to internships and entry-level roles</span>
+<h1>Hi, I'm Shreedhar.</h1>
+<p class="role">BCA student working toward a career as a <b class="type" id="typed"></b></p>
+<div class="cta"><a class="btn pri" href="#projects">View my project</a><a class="btn sec" href="#contact">Contact me</a></div>
+</div>
+<div class="feed" aria-hidden="true">
+<div class="feed-top"><i></i><i></i><i></i><span>Driver monitor · simulated</span></div>
+<div class="feed-body" id="feed"></div>
+<div class="feed-foot">A small preview of my drowsiness detection project</div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="sec-head rv"><h2>About me</h2></div>
+<div class="about">
+<div class="rv">
+<p>I'm a BCA student from Bidar, Karnataka. I enjoy building things for the web and finding out how systems behave when something goes wrong.</p>
+<p>My goal is to become a SOC Analyst L1: watching alerts, investigating suspicious activity, and helping keep an organisation safe. I'm learning the fundamentals step by step and I'm ready to learn on the job.</p>
+</div>
+<div class="facts rv">
+<div class="fact"><span>Location</span><b>Bidar, Karnataka</b></div>
+<div class="fact"><span>Studying</span><b>BCA</b></div>
+<div class="fact"><span>Career goal</span><b>SOC Analyst L1</b></div>
+</div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<div class="sec-head rv"><h2>Skills</h2><p>What I use today, and what I'm learning next.</p></div>
+<div class="grid g3">
+<div class="card rv"><div class="ico">🌐</div><h3>Web development</h3><p>Building clean, responsive pages.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></div>
+<div class="card rv"><div class="ico">🗄️</div><h3>Databases</h3><p>Writing queries to store and fetch data.</p><div class="chips"><span class="chip">SQL</span></div></div>
+<div class="card rv"><div class="ico">🐍</div><h3>Programming</h3><p>Scripting and problem solving.</p><div class="chips"><span class="chip">Python (basic)</span></div></div>
+<div class="card rv"><div class="ico">🛡️</div><h3>Learning for SOC</h3><p>Skills I'm building toward my goal.</p><div class="chips"><span class="chip learn">Networking basics</span><span class="chip learn">Log analysis</span><span class="chip learn">Security tools</span></div></div>
+</div></div></section>
+
+<section id="education"><div class="wrap">
+<div class="sec-head rv"><h2>Education</h2></div>
+<div class="tl"><div class="item card rv">
+<span class="badge">Currently pursuing</span>
+<h3>Bachelor of Computer Applications (BCA)</h3>
+<p>Channabasamma BCA and B.Com College, Bidar</p>
+</div></div></div></section>
+
+<section id="projects"><div class="wrap">
+<div class="sec-head rv"><h2>Projects</h2></div>
+<div class="card proj rv">
+<div class="vis"><div style="text-align:center"><div class="eye"></div><div class="alert-tag">⚠ DROWSINESS ALERT</div></div></div>
+<div class="txt">
+<span class="badge">Featured project</span>
+<h3>Driver drowsiness detection system</h3>
+<p style="margin-top:.7rem">A safety system that watches the driver and raises an alert when signs of drowsiness appear, to help prevent accidents caused by tired driving.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">Safety</span><span class="chip">Real-time alerts</span></div>
+</div></div></div></section>
+
+<section id="certs"><div class="wrap">
+<div class="sec-head rv"><h2>Certifications</h2></div>
+<div class="grid g3"><div class="card rv"><div class="ico">🎓</div><h3>AICTE</h3><p>All India Council for Technical Education</p></div></div>
+</div></section>
+
+<section id="resume"><div class="wrap">
+<div class="sec-head rv"><h2>Resume</h2><p>A quick summary. Print it or save it as a PDF.</p></div>
+<div class="paper rv">
+<div class="p-head"><div><h3>Shreedhar</h3><p>Aspiring SOC Analyst L1</p></div><div class="p-meta"><span>Bidar, Karnataka</span><span>+91 90195 03243</span></div></div>
+<div class="p-body">
+<div class="p-side">
+<div class="p-sec"><h4>Skills</h4><ul><li>HTML, CSS, JavaScript</li><li>SQL</li><li>Python (basic)</li><li>SIEM alerts and log reading</li>Cyber security fundamentals<li></li></ul></div>
+<div class="p-sec"><h4>Certification</h4><ul><li>AICTE</li></ul></div>
+</div>
+<div class="p-main">
+<div class="p-sec"><h4>Objective</h4><p>BCA student looking for an entry-level SOC Analyst L1 role, where I can use my web and database skills and keep learning security monitoring.</p></div>
+<div class="p-sec"><h4>Education</h4><p><b>Bachelor of Computer Applications (BCA)</b><br>Channabasamma BCA and B.Com College, Bidar</p></div>
+<div class="p-sec"><h4>Project</h4><p><b>Driver drowsiness detection system</b><br>Raises an alert when signs of driver drowsiness appear.</p></div>
+</div>
+</div>
+</div>
+<div class="cta"><button class="btn pri" id="print">Print or save as PDF</button></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="sec-head rv"><h2>Contact</h2><p>Message me on WhatsApp or give me a call.</p></div>
+<div class="contact rv">
+<div class="avatar"><img src="shreedhar.jpeg" alt="Photo of Shreedhar"></div>
+<div class="clist">
+<a class="crow" href="https://wa.me/919019503243" target="_blank" rel="noopener"><div class="ico">💬</div><div><span>WhatsApp</span><b>+91 90195 03243</b></div></a>
+<a class="crow" href="tel:+919019503243"><div class="ico">📞</div><div><span>Phone</span><b>+91 90195 03243</b></div></a>
+<div class="crow"><div class="ico">📍</div><div><span>Location</span><b>Bidar, Karnataka, India</b></div></div>
+</div></div></div></section>
+</main>
+<footer>© 2026 Shreedhar</footer>
+
+<script>
+const $=s=>document.querySelector(s);
+// theme + menu
+$('#theme').onclick=()=>{const r=document.documentElement,d=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);r.dataset.theme=d?'light':'dark'};
+$('#burger').onclick=e=>{const o=$('#links').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o)};
+$('#links').onclick=e=>{if(e.target.tagName==='A')$('#links').classList.remove('open')};
+// typing
+const words=['SOC Analyst L1','Security Analyst','Cyber Defender'];let w=0,c=0,del=false;
+(function t(){const el=$('#typed'),s=words[w];el.textContent=s.slice(0,c);
+if(!del&&c===s.length){del=true;return setTimeout(t,1600)}
+if(del&&c===0){del=false;w=(w+1)%words.length}
+c+=del?-1:1;setTimeout(t,del?45:90)})();
+// feed
+const L=[['ok','Camera connected'],['ok','Face detected'],['ok','Eyes open · driver alert'],['warn','Eyes closing · 1.2s'],['bad','ALERT · drowsiness detected'],['ok','Driver responded · monitoring']];
+let i=0;const feed=$('#feed');
+function add(){const[k,m]=L[i%L.length];i++;const d=document.createElement('div');d.className='ln '+k;
+d.innerHTML='<time>'+new Date().toTimeString().slice(0,8)+'</time><em>'+m+'</em>';feed.appendChild(d);
+while(feed.children.length>7)feed.removeChild(feed.firstChild)}
+add();setInterval(add,1500);
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,n)=>{el.style.transitionDelay=(n%4)*80+'ms';io.observe(el)});
+// active nav
+const secs=[...document.querySelectorAll('main section')],nav=[...document.querySelectorAll('.links a')];
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nav.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'}).observe&&secs.forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nav.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+s.id))}),{rootMargin:'-45% 0px -50% 0px'}).observe(s));
+// print
+$('#print').onclick=()=>{try{print()}catch(e){}};
+</script>
+</body>
+</html>
